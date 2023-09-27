@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 'aside header'
+                        'aside main'
+                        'aside footer';
+}
+
+header{
+    height: 10vh;
+    background-color: blue;
+    grid-area: header;
+}
+
+aside{
+    height: 100vh;
+    background-color: yellow;
+    grid-area: aside;
+}
+
+main{
+    height: 80vh;
+    background-color: blueviolet;
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1 fr 1fr;
+    grid-template-areas: 'item1 item2 item3 item4'
+                        'item5' 'item2 . . ';
+
+}
+
+.item1{
+    grid-area: item1;
+}
+
+.item2{
+    grid-area: item2;
+}
+
+.item3{
+    grid-area: item3;
+}
+
+.item4{
+    grid-area: item4;
+}
+
+.itens-iguais{
+    width: 10vw;
+    height: 10vh;
+}
+
+.item{
+    width: 20vw;
+    height: 20vh;
+}
+
+footer{
+        height: 10vh;
+        background-color: brown;
+        grid-area: footer;
+}
